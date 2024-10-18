@@ -31,3 +31,41 @@ setInterval(revealText, 5000);
 
 // Start the animation when the page loads
 window.onload = revealText;
+
+// Carousel
+let currentSlideIndex = 0;
+
+function openModal() {
+  document.getElementById('thumbnailModal').style.display = 'flex'; // Display modal only when the button is clicked
+}
+
+function closeModal() {
+  document.getElementById('thumbnailModal').style.display = 'none'; // Close modal when the close button is clicked
+}
+
+function changeSlide(n) {
+  currentSlideIndex += n;
+  showSlide(currentSlideIndex);
+}
+
+function showSlide(index) {
+  let slides = document.getElementsByClassName('slide');
+  if (index >= slides.length) {
+    currentSlideIndex = 0;
+  }
+  if (index < 0) {
+    currentSlideIndex = slides.length - 1;
+  }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+  }
+  slides[currentSlideIndex].style.display = 'block';
+}
+
+// Close
+window.onclick = function(event) {
+  let modal = document.getElementById('thumbnailModal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}

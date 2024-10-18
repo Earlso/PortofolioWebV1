@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Andreas | Home</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="carousel.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
@@ -278,13 +279,13 @@
                 class="project-img"
               />
             </div>
-            <h2 class="experience-sub-title project-title">Project One</h2>
+            <h2 class="experience-sub-title project-title">Youtube Thumbnail</h2>
             <div class="btn-container">
               <button
                 class="btn btn-color-2 project-btn"
-                onclick="location.href='https://github.com/'"
+                onclick="openModal()"
               >
-                Github
+                View
               </button>
               <button
                 class="btn btn-color-2 project-btn"
@@ -293,6 +294,21 @@
                 Live Demo
               </button>
             </div>
+            <!-- Modal for Thumbnail Gallery -->
+<div id="thumbnailModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <div class="thumbnail-slides">
+      <!-- Add your thumbnail images here -->
+      <img src="assets/thumbnail/thumbnail (1).png" class="slide" style="display: block;">
+      <img src="assets/thumbnail/thumbnail (2).png" class="slide" style="display: none;">
+      <img src="assets/thumbnail/thumbnail (4).png" class="slide" style="display: none;">
+    </div>
+    <!-- Arrows for navigating thumbnails -->
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+</div>
           </div>
           <div class="details-container color-container">
             <div class="article-container">
