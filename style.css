@@ -9,7 +9,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #cab7ff, #ffffff);
+  background: linear-gradient(135deg, #e3d9ff, #e3d9ff,#dfdfdf);
   
 }
 
@@ -40,13 +40,13 @@ nav {
   align-items: center;
   height: 8vh;
   position: fixed;
-  background-color: rgba(255, 247, 200, 0.6);
+  background-color: rgba(255, 249, 216, 0.6);
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 4px rgba(0,0,0,0.1);
   width: 100%;
   z-index: 1000;
-  opacity: 0;
-  animation: fadeIn 0.5s forwards ease-out;
+  /* opacity: 0; */
+  /* animation: fadeIn 0.5s forwards ease-out; */
   /* margin-top: -8vh; */
 }
 
@@ -190,7 +190,8 @@ section {
   justify-content: center;
   gap: 5rem;
   height: 80vh;
-
+  opacity: 0;
+  animation: fadeIn 1s forwards ease-in-out;
 }
 
 .section__pic-container {
@@ -205,14 +206,11 @@ section {
   border-radius: 10%;
   box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.5s ease-in-out;
-  opacity: 0;
-  animation: fadeIn 1s forwards ease-in-out;
+
 }
 
 .profile-pic:hover {
-  transform: rotateZ(-2deg) scale(1.05);
-  
-  
+  transform: rotateZ(-1deg) scale(1.05);
 }
 
 .section__text {
@@ -424,6 +422,7 @@ article .icon {
 
 #projects {
   position: relative;
+  padding-top: 12vh;
 }
 
 .color-container {
@@ -454,6 +453,7 @@ article .icon {
   justify-content: center;
   flex-direction: column;
   height: 70vh;
+  padding-top: 0;
 }
 
 .contact-info-upper-container {
